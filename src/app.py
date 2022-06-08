@@ -3,8 +3,6 @@ import shopify
 import boto3
 import json
 import os
-# from aws_xray_sdk.core import patch_all
-# from aws_xray_sdk.core import xray_recorder
 from utils import rate_limit, build_credentials, resp
 from boto3.dynamodb.conditions import Attr
 
@@ -16,7 +14,6 @@ logger = logging.getLogger()
 logger.setLevel(logging.INFO)
 logger = logging.LoggerAdapter(logger, {})
 client = boto3.client('sns')
-# patch_all()
 
 
 # @xray_recorder.capture('lambda_handler')
